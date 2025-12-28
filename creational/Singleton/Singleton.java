@@ -1,4 +1,4 @@
-package creational.Singleton;
+package Singleton;
 
 public class Singleton {
     // we are using volatile because imagine if we run 2 threads and one thread occupied instance variable then a shared variable stored in the memory can reference a partially constructed object. like second thread will get not null instance but it is still not fully initialize by first thread
