@@ -10,7 +10,7 @@ public class COR {
         Handler handler = new UserExistsHandler(db);
         handler.setNext(new ValidPasswordHandler(db)).setNext(new RoleCheckHandler());
         AuthService as = new AuthService(handler);
-        as.logIn("username", "password");
+        as.logIn("abc","abc");
     }
 }
 
@@ -23,6 +23,7 @@ class Database {
         users = new HashMap<>();
         users.put("admin_username", "admin_password");
         users.put("user_username", "user_password");
+        users.put("abc","abc");
     }
 
     public boolean isValidUser(String username) {
